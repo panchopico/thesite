@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+
+# !/home/galactus/projects/herokuapp/python/pyue/staticsite/bin/python3
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
@@ -43,6 +45,13 @@ BOOTSTRAP_THEME = 'flatly'
 # PLUGIN_PATHS = ['/path/to/git/pelican-plugins']
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGINS = [
-    'i18n_subsites']
+    'i18n_subsites',
+    'series',
+    'tag_cloud',
+    'liquid_tags.youtube',
+    'liquid_tags.notebook',
+    'liquid_tags.include_code',
+    'render_math',
+    'pelican-ipynb.markup']
 
 I18N_TEMPLATES_LANG = 'en'
