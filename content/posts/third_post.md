@@ -12,4 +12,4 @@ Summary: This is the third post of a series of posts. It will show series an jup
 
 This post contains a jupyter notebook.
 
-{% notebook ../code/sample_notebook.ipynb %}
+ notebook ../code/sample_notebook.ipynb

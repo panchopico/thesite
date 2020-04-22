@@ -37,13 +37,19 @@ DEFAULT_PAGINATION = 5
 #RELATIVE_URLS = True
 
 ## Added per article 3
-PLUGIN_PATHS = ['pelican-plugins']
+PLUGIN_PATHS = ['pelican-plugins',
+                './plugins']
 
 THEME = 'pelican-themes/pelican-bootstrap3'
 BOOTSTRAP_THEME = 'flatly'
 
 # PLUGIN_PATHS = ['/path/to/git/pelican-plugins']
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
+
+MARKUP = ('md', 'ipynb')
+
+IPYNB_USE_METACELL = True
+
 PLUGINS = [
     'i18n_subsites',
     'series',
@@ -52,7 +58,8 @@ PLUGINS = [
     'liquid_tags.notebook',
     'liquid_tags.include_code',
     'render_math',
-    'pelican-ipynb.markup',
+    'ipynb.markup',
+    # 'pelican-ipynb.markup',
     'tipue_search']
 
 # for Tique Search Plugin
@@ -78,3 +85,7 @@ ARTICLE_PATHS = ['posts']
 # Top menus
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = True
+
+# if you create jupyter files in the content dir, snapshots are saved with the same
+# metadata. These need to be ignored. 
+IGNORE_FILES = [".ipynb_checkpoints"] 
